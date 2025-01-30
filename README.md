@@ -1,6 +1,6 @@
 My First USACO Problem Solution (not my first USACO problem lol):
 
-This is my C++ solution to the infamous Lazy Cow problem in the 2024 Febuary Platinum Competition. I took approx. 1hr 45min to complete this solution, and here I will write a brief explanation.
+This is my C++ solution to the infamous Lazy Cow problem in the 2024 Febuary Platinum Competition. I took approx. 2hrs to complete this solution, and here I will write a brief explanation.
 
 If you do not know what the Lazy Cow Problem is, (shame) here is the link to the problem: https://usaco.org/index.php?page=viewproblem2&cpid=1404
 
