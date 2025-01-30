@@ -8,10 +8,12 @@ Interpretation:
 - Bessie can prepare test cases each minute, using powers of 3 as energy costs.
 - She must meet D demands, each requiring at least b_i test cases within m_i minutes.
 - We need to find the minimum energy expenditure for each demand.
+
 Observations:
 - Since b_i can be as large as 10^12, we should use large test case values first to minimize energy.
 - The possible test cases per minute follow the pattern: 1, 3, 9, 27, ..., which are powers of 3.
 - We need to distribute these optimally within m_i minutes. The obvious answer is to use a greedy algorithm.
+
 Solution:
 - Precompute powers of 3 up to 3^19, since 3^19 > 10^{12}.
 - Process each demand by starting with the largest possible power of 3
@@ -21,13 +23,16 @@ Solution:
      - use = min(max_cases, m_i) (We cannot exceed the available minutes)
 - Reduce the remaining required test cases and continue with smaller powers by iterating
 - Program keeps track of energy spent to process each demand
+
 Avoiding Recalculations:
 - Precomputing powers of 3 takes O(1), around 20 values
 - Each demand is processed in O(20)=O(1), because we iterate over at most 20 powers
 - The overall complexity is O(D) which is efficent for D<=2x10^5
+
 Conclusion:
 - This program utilizes iteration and a greedy approach.
 - Iteration can be done a lot easier with python, but C++ is 10x faster than python, and there is a program time limit (2 sec.)
-- Key tricks:
-    - Lots of people overlook the observation step. This step is the most important step for a successful solution.
-    - Don't forget to simplify the question and what its asking. This step will allow you to see your solution more clearly.
+
+Key tricks:
+- Lots of people overlook the observation step. This step is the most important step for a successful solution.
+- Don't forget to simplify the question and what its asking. This step will allow you to see your solution more clearly.
